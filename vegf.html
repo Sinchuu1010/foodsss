@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie World - Veg Menu</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8ed;
+        }
+
+      
+        /* HEADING */
+
+        .heading {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .heading h1 {
+            color: maroon;
+            margin-bottom: 5px;
+        }
+
+        .heading p {
+            color:  #666;
+        }
+
+        /* SECTION */
+
+        .section-title {
+            text-align: center;
+            color:  #c65332;
+            margin: 25px;
+        }
+
+        /* FOOD GRID */
+
+        .food-container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        /* CARD */
+
+        .food-card {
+            background: white;
+            padding: 15px;
+            text-align: center;
+
+            border-radius: 7px;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .food-card img {
+            width: 150px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .food-card h3 {
+            color: #c65332;
+            margin: 10px 0 5px;
+        }
+
+        .food-card p {
+            color: #666;
+            font-size: 12px;
+            min-height: 30px;
+        }
+
+        .price {
+            font-weight: bold;
+            margin: 8px;
+        }
+
+        /* BUTTONS */
+
+        button {
+            border: none;
+            padding: 7px 11px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+            margin: 2px;
+        }
+
+        .cart-btn {
+            background: #e35419;
+            color: white;
+        }
+
+        .order-btn {
+            background: #20a464;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #c65332;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px) {
+
+            .food-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .food-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+ 
+<!-- HEADING -->
+
+<div class="heading">
+
+    <h1><u>Vegetarian Menu</u></h1>
+
+    <p>Delicious and fresh vegetarian dishes</p>
+
+</div>
+
+
+
+<!-- MAIN COURSE -->
+
+<h2 class="section-title">
+   Veg Main Course
+</h2>
+
+
+<div class="food-container">
+
+
+    <!-- VEG BIRYANI -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\rice.jpg">
+
+        <h3>Veg Biryani</h3>
+
+        <p>Fresh vegetables cooked with aromatic rice.</p>
+
+        <div class="price">₹180</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Veg Biryani',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Veg Biryani',180)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- PANEER MASALA -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\pan.jpg">
+
+        <h3>Paneer Masala</h3>
+
+        <p>Soft paneer cooked in rich spicy gravy.</p>
+
+        <div class="price">₹190</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Paneer Masala',190)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Paneer Masala',190)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- PALAK PANEER -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\palak paneer.jpeg">
+
+        <h3>Palak Paneer</h3>
+
+        <p>Paneer cooked with fresh spinach gravy.</p>
+
+        <div class="price">₹180</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Palak Paneer',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Palak Paneer',180)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- MIX VEG -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\mixveg.jpeg">
+
+        <h3>Mix Veg</h3>
+
+        <p>Fresh vegetables cooked with special spices.</p>
+
+        <div class="price">₹150</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Mix Veg',150)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Mix Veg',150)">
+            Order Now
+        </button>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- STARTERS -->
+
+<h2 class="section-title">
+    Veg Starters
+</h2>
+
+
+<div class="food-container">
+
+
+    <!-- GOBI MANCHURIAN -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\gobi - Copy.jpg">
+
+        <h3>Gobi Manchurian</h3>
+
+        <p>Crispy cauliflower tossed in Manchurian sauce.</p>
+
+        <div class="price">₹140</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Gobi Manchurian',140)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Gobi Manchurian',140)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- PANEER TIKKA -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\tikka.jpeg">
+
+        <h3>Paneer Tikka</h3>
+
+        <p>Grilled paneer with delicious spices.</p>
+
+        <div class="price">₹180</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Paneer Tikka',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Paneer Tikka',180)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- SAMOSA -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\samosa.jpeg">
+
+        <h3>Samosa</h3>
+
+        <p>Crispy samosa served with chutney.</p>
+
+        <div class="price">₹60</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Samosa',60)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Samosa',60)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- CHILLI PANEER -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\paneer chilly.jpg">
+
+        <h3>Chilli Paneer</h3>
+
+        <p>Paneer cooked with vegetables and sauces.</p>
+
+        <div class="price">₹170</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chilli Paneer',170)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chilli Paneer',170)">
+            Order Now
+        </button>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Foodie World | Taste That Makes You Smile ❤️
+
+</footer>
+
+
+    
+
+
+
+<script>
+
+let cart =
+    JSON.parse(localStorage.getItem("cart")) || [];
+
+
+function addToCart(name, price) {
+
+    let existing = cart.find(function(item) {
+
+        return item.name === name;
+
+    });
+
+
+    if (existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        cart.push({
+
+            name: name,
+            price: price,
+            quantity: 1
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    alert(name + " added to cart!");
+
+}
+
+
+function orderNow(name, price) {
+
+    addToCart(name, price);
+
+    window.location.href = "Cart2.html";
+
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie World - Home</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+
+         
+
+        /* ================= HERO ================= */
+
+        .hero {
+
+            height: 400px;
+           width:100%;
+           background-position:center;
+          background-repeat:no-repeat;
+          background-size:cover;
+
+
+
+           
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80");
+
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+        .hero-content h1 {
+
+            font-size: 32px;
+
+            margin: 0 0 10px;
+
+        }
+
+
+        .hero-content h1 span {
+
+            color: #ffd27f;
+
+        }
+
+
+        .hero-content p {
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        /* ================= BUTTONS ================= */
+
+        .hero-btn {
+
+            padding: 9px 18px;
+
+            border-radius: 20px;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin: 5px;
+
+            display: inline-block;
+
+        }
+
+
+        /* EXPLORE MENUS */
+
+        .explore-btn {
+
+            background: #f5a623;
+
+            color: white;
+
+        }
+
+
+        /* ORDER NOW */
+
+        .order-btn {
+
+            background: white;
+
+            color: #555;
+
+        }
+
+
+        .hero-btn:hover {
+
+            opacity: 0.85;
+
+        }
+
+
+        /* ================= WHY CHOOSE ================= */
+
+        .why {
+
+            text-align: center;
+
+            padding: 30px 10px 35px;
+
+        }
+
+
+        .why h2 {
+
+            color: #a84b25;
+
+            font-size: 21px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .features {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .feature {
+
+            width: 155px;
+
+            min-height: 105px;
+
+            background: white;
+
+            border: 1px solid #eee;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.10);
+
+            padding: 12px;
+
+        }
+
+
+        .feature-icon {
+
+            font-size: 22px;
+
+        }
+
+
+        .feature h3 {
+
+            font-size: 12px;
+
+            color: #555;
+
+            margin: 8px 0 5px;
+
+        }
+
+
+        .feature p {
+
+            font-size: 10px;
+
+            color: #666;
+
+            margin: 0;
+
+            line-height: 1.4;
+
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background:#c65332;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 12px;
+
+            font-size: 11px;
+
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 700px) {
+
+            header {
+
+                height: auto;
+
+                flex-direction: column;
+
+                gap: 10px;
+
+                padding: 12px;
+
+            }
+
+
+            nav {
+
+                text-align: center;
+
+            }
+
+
+            nav a {
+
+                margin: 0 5px;
+
+                font-size: 11px;
+
+            }
+
+
+            .hero {
+
+                height: 300px;
+
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 27px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <h1>
+            Welcome to
+            <span>Foodie World</span>
+        </h1>
+
+
+        <p>
+            Delicious food, fresh ingredients and unforgettable taste.
+        </p>
+
+
+        <!-- EXPLORE MENUS BUTTON -->
+
+        <a
+            href="varities.html"
+            class="hero-btn explore-btn">
+
+            Explore Menus
+
+        </a>
+
+
+        <!-- ORDER NOW -->
+
+        <a
+            href="varities.html"
+            class="hero-btn order-btn">
+
+            Order Now
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= WHY CHOOSE ================= -->
+
+<section class="why">
+
+
+    <h2>
+        Why Choose Foodie World?
+    </h2>
+
+
+    <div class="features">
+
+
+        <!-- FEATURE 1 -->
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🍕
+            </div>
+
+            <h3>
+                Delicious Food
+            </h3>
+
+            <p>
+                Enjoy tasty and freshly prepared dishes.
+            </p>
+
+        </div>
+
+
+
+        <!-- FEATURE 2 -->
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🥗
+            </div>
+
+            <h3>
+                Fresh Ingredients
+            </h3>
+
+            <p>
+                We use fresh ingredients for every dish.
+            </p>
+
+        </div>
+
+
+
+        <!-- FEATURE 3 -->
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚀
+            </div>
+
+            <h3>
+                Quick Service
+            </h3>
+
+            <p>
+                Get your favourite food quickly and easily.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Foodie World | Taste That Makes You Smile ❤️
+
+</footer>
+
+
+</body>
+
+</html>
