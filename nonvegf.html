@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie World - Non Veg Menu</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8ed;
+        }
+
+
+
+        /* HEADING */
+
+        .heading {
+            text-align: center;
+            padding: 25px;
+        }
+
+
+        .heading h1 {
+            color: maroon;
+            margin-bottom: 5px;
+        }
+
+
+        .heading p {
+            color: #666;
+        }
+
+
+        /* SECTION */
+
+        .section-title {
+            text-align: center;
+            color: #b73520;
+
+            margin: 25px;
+        }
+
+
+        /* GRID */
+
+        .food-container {
+
+            width: 92%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        /* CARD */
+
+        .food-card {
+
+            background: white;
+
+            padding: 15px;
+
+            text-align: center;
+
+            border-radius: 7px;
+
+            box-shadow:
+                0 2px 8px
+                rgba(0,0,0,0.15);
+        }
+
+
+        .food-card img {
+
+            width: 150px;
+
+            height: 120px;
+
+            object-fit: cover;
+
+            border-radius: 6px;
+        }
+
+
+        .food-card h3 {
+
+            color: #b73520;
+
+            margin: 10px 0 5px;
+        }
+
+
+        .food-card p {
+
+            color: #666;
+
+            font-size: 12px;
+
+            min-height: 30px;
+        }
+
+
+        .price {
+
+            font-weight: bold;
+
+            margin: 8px;
+        }
+
+
+        /* BUTTONS */
+
+        button {
+
+            border: none;
+
+            padding: 7px 11px;
+
+            border-radius: 15px;
+
+            cursor: pointer;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            margin: 2px;
+        }
+
+
+        .cart-btn {
+
+            background: #e35419;
+
+            color: white;
+        }
+
+
+        .order-btn {
+
+            background: #20a464;
+
+            color: white;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            background: #c65332;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px;
+
+            margin-top: 30px;
+        }
+
+
+        footer p {
+
+            margin: 0;
+
+            font-size: 12px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px) {
+
+            .food-container {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+
+            .food-container {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+</header>
+
+
+
+<!-- HEADING -->
+
+<div class="heading">
+
+    <h1><u>Non-Vegetarian Menu</u></h1>
+
+    <p>Delicious chicken, egg and seafood dishes</p>
+
+</div>
+
+
+
+<!-- MAIN COURSE -->
+
+<h2 class="section-title">
+    Non-Veg Main Course
+</h2>
+
+
+<div class="food-container">
+
+
+    <!-- CHICKEN BIRYANI -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\bbb.jpg">
+
+        <h3>Chicken Biryani</h3>
+
+        <p>Spicy and delicious chicken biryani.</p>
+
+        <div class="price">₹220</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken Biryani',220)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken Biryani',220)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- CHICKEN CURRY -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\ssss.jpeg">
+
+        <h3>Chicken Curry</h3>
+
+        <p>Chicken cooked in rich spicy gravy.</p>
+
+        <div class="price">₹200</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken Curry',200)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken Curry',200)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- EGG CURRY -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\egg curry.jpg">
+
+        <h3>Egg Curry</h3>
+
+        <p>Boiled eggs cooked in spicy gravy.</p>
+
+        <div class="price">₹150</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Egg Curry',150)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Egg Curry',150)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- FISH FRY -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\fish fry.jpg">
+
+        <h3>Fish Fry</h3>
+
+        <p>Fresh fish cooked in traditional Fry.</p>
+
+        <div class="price">₹230</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Fish Curry',230)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Fish Curry',230)">
+            Order Now
+        </button>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- STARTERS -->
+
+<h2 class="section-title">
+    Non-Veg Starters
+</h2>
+
+
+<div class="food-container">
+
+
+    <!-- CHICKEN TANDOORI -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\tand.jpg">
+
+        <h3>Chicken Tandoori</h3>
+
+        <p>Juicy roasted chicken with special spices.</p>
+
+        <div class="price">₹250</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken Tandoori',250)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken Tandoori',250)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- CHICKEN 65 -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\chicken65.jpg">
+
+        <h3>Chicken 65</h3>
+
+        <p>Crispy and spicy fried chicken.</p>
+
+        <div class="price">₹180</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken 65',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken 65',180)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- CHICKEN MANCHOW SOUP -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\chicken suop.jpg">
+
+        <h3>Chicken Manchow Soup</h3>
+
+        <p>Hot and spicy chicken soup.</p>
+
+        <div class="price">₹140</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken Manchow Soup',140)">
+            Add to+ Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken Manchow Soup',140)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- CHICKEN PEPPER DRY -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\chiceknrost.jpeg">
+
+        <h3>Chicken Pepper Dry</h3>
+
+        <p>Spicy chicken cooked with black pepper.</p>
+
+        <div class="price">₹210</div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken Pepper Dry',210)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken Pepper Dry',210)">
+            Order Now
+        </button>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Foodie World | Fresh NON-Veg Food
+    </p>
+
+
+<script>
+
+let cart =
+    JSON.parse(localStorage.getItem("cart")) || [];
+
+
+function addToCart(name, price) {
+
+    let existing = cart.find(function(item) {
+
+        return item.name === name;
+
+    });
+
+
+    if (existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        cart.push({
+
+            name: name,
+
+            price: price,
+
+            quantity: 1
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    alert(name + " added to cart!");
+
+}
+
+
+function orderNow(name, price) {
+
+    addToCart(name, price);
+
+    window.location.href = "Cart2.html";
+
+}
+
+</script>
+
+
+</body>
+</html>
