@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie World - Menu</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8ed;
+            color: #333;
+        }
+
+                /* ================= PAGE HEADING ================= */
+
+        .heading {
+            text-align: center;
+            padding: 25px 10px 10px;
+        }
+
+        .heading h1 {
+            margin: 0;
+            color: #b23a00;
+            font-size: 30px;
+        }
+
+        .heading p {
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* ================= SECTION TITLE ================= */
+
+        .section-title {
+            text-align: center;
+            color: #a83b00;
+            font-size: 22px;
+            margin: 25px 0 15px;
+        }
+
+        /* ================= FOOD GRID ================= */
+
+        .food-container {
+            width: 92%;
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        /* ================= FOOD CARD ================= */
+
+        .food-card {
+            background: white;
+            padding: 15px;
+            text-align: center;
+
+            border: 1px solid #ddd;
+            border-radius: 6px;
+
+            box-shadow: 0 2px 7px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 14px rgba(0,0,0,0.18);
+        }
+
+        .food-card img {
+            width: 150px;
+            height: 120px;
+
+            object-fit: cover;
+
+            border-radius: 5px;
+        }
+
+        .food-card h3 {
+            color: #9d3500;
+            font-size: 17px;
+            margin: 10px 0 5px;
+        }
+
+        .food-card p {
+            color: #666;
+            font-size: 12px;
+            min-height: 30px;
+            margin: 5px 0;
+        }
+
+        .price {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            margin: 8px 0;
+        }
+
+        /* ================= BUTTONS ================= */
+
+        button {
+            border: none;
+            padding: 6px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+            margin: 2px;
+        }
+
+        .cart-btn {
+            background: #d35400;
+            color: white;
+        }
+
+        .order-btn {
+            background: #20a464;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #c65332;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 900px) {
+
+            .food-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .food-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+
+<!-- =====================================================
+                    MAIN COURSE
+===================================================== -->
+
+<h2 class="section-title">
+    Main Course
+</h2>
+
+
+<div class="food-container">
+
+
+    <!-- VEG BIRYANI -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\rice.jpg">
+
+        <h3>Veg Biryani</h3>
+
+        <p>Delicious aromatic vegetable biryani.</p>
+
+        <div class="price">
+            ₹180
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Veg Biryani',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Veg Biryani',180)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- CHICKEN BIRYANI -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\bbb.jpg">
+
+        <h3>Chicken Biryani</h3>
+
+        <p>Spicy and flavorful chicken biryani.</p>
+
+        <div class="price">
+            ₹220
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken Biryani',220)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken Biryani',220)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- EGG CURRY -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\egg curry.jpg">
+
+        <h3>Egg Curry</h3>
+
+        <p>Spicy egg curry with rich gravy.</p>
+
+        <div class="price">
+            ₹150
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Egg Curry',150)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Egg Curry',150)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- PANEER MASALA -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\pan.jpg">
+
+        <h3>Paneer Masala</h3>
+
+        <p>Soft paneer cooked in spicy masala.</p>
+
+        <div class="price">
+            ₹190
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Paneer Masala',190)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Paneer Masala',190)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    
+           <!-- HYDERABADI BIRIYANI -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\chicken hyderabad.jpg">
+
+        <h3>hyderabadi biriyani</h3>
+
+        <p>Fragrant basmati rice layered with tender chicken, aromatic spices, and rich biryani flavors..</p>
+
+        <div class="price">
+            ₹150
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('hyderabadi biriyani',200)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('hyderabadi biriyani',200)">
+            Order Now
+        </button>
+</div>
+        
+        
+                  <!-- BUTTER NAAN-->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\butter nan.jpg">
+
+        <h3>Butter naan</h3>
+
+        <p>Soft, fluffy naan brushed with rich butter, perfect with your favourite curry...</p>
+
+        <div class="price">
+            ₹150
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('butter naan',50)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('butter naan',50)">
+            Order Now
+        </button>
+        </div>
+
+
+
+       <!-- CHICKEN DO PYAZA-->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\chicken do pyaza.jpg">
+
+        <h3>Chicken do pyaza</h3>
+
+        <p>Juicy chicken cooked with plenty of onions and flavorful spices for a rich, delicious taste.</p>
+
+        <div class="price">
+            ₹190
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken do pyaza',190)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken do pyaza',190)">
+            Order Now
+        </button>
+</div>
+
+
+
+
+
+                  <!-- MUSHROOM MASALA-->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\mashroom.jpg">
+
+        <h3>Mushroom Masala</h3>
+
+        <p>Tender mushrooms cooked in a creamy, spicy masala gravy with aromatic spices.</p>
+
+        <div class="price">
+            ₹180
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Mushroom Masala',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Mushroom Masala',180)">
+            Order Now
+        </button>
+</div>
+</div>
+
+
+<!-- =====================================================
+                  SNACKS & STARTERS
+===================================================== -->
+
+<h2 class="section-title">
+    Snacks & Starters
+</h2>
+
+
+<div class="food-container">
+
+
+    <!-- CHICKEN TANDOORI -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\tand.jpg">
+
+        <h3>Chicken Tandoori</h3>
+
+        <p>Juicy chicken roasted with special spices.</p>
+
+        <div class="price">
+            ₹250
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken Tandoori',250)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken Tandoori',250)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- PAV-BAAJI
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\bajii.jpeg">
+
+        <h3>Chicken 65</h3>
+
+        <p>Crispy and spicy fried chicken.</p>
+
+        <div class="price">
+            ₹180
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken 65',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken 65',180)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- SAMOSA -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\samosa.jpeg">
+
+        <h3>Samosa</h3>
+
+        <p>Crispy samosa served with chutney.</p>
+
+        <div class="price">
+            ₹60
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Samosa',60)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Samosa',60)">
+            Order Now
+        </button>
+
+    </div>
+
+
+
+
+
+    <!-- PAV-BAJI-->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\bajii.jpeg">
+
+        <h3>Pav-baji</h3>
+
+        <p>spicy mashed vegetables cooked in butter masala,served hot with soft toasted pav.</p>
+
+        <div class="price">
+            ₹80
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('pav-baji',80)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('pav-baji',80)">
+            Order Now
+        </button>
+
+    </div>
+
+<!-- MASALA-DOSA-->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\masaladosa.jpeg">
+
+        <h3>Masala-Dosa</h3>
+
+        <p>Crispy golden Dosa filled with delicious spiced potato masala,sereved with chutney and sambar.</p>
+
+        <div class="price">
+            ₹80
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Masala-Dosa',80)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Masala-Dosa',80)">
+            Order Now
+        </button>
+
+    </div>
+   
+    <!-- SHAWARMA-->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\shhh.jpeg">
+
+        <h3>shawarama</h3>
+
+    
+        <p>Juicy chicken with fresh veggies and cremy sauce</p>
+        <div class="price">
+            ₹100
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('shawarama',100)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('shawarama',100)">
+            Order Now
+        </button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- PANI-PURI-->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\pani.jpeg">
+
+        <h3>Chilli Paneer</h3>
+
+    
+        <p>Crispy puris filled with spiciy tangy water,falvourfull chutney,delicious potato stuffing.</p>
+        <div class="price">
+            ₹50
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Pani-puri',50)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('pani-puri',50)">
+            Order Now
+        </button>
+
+    </div>
+
+
+
+
+    <!-- CHILLI PANEER -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\paneer chilly.jpg">
+
+        <h3>Chilli Paneer</h3>
+
+        <p>Paneer tossed with vegetables and sauces.</p>
+
+        <div class="price">
+            ₹170
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chilli Paneer',170)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chilli Paneer',170)">
+            Order Now
+        </button>
+
+    </div>
+
+
+
+   <!-- CHICKEN 65 -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\chicken65.jpg">
+
+        <h3>Chicken 65</h3>
+
+        <p>Crispy and spicy fried chicken.</p>
+
+        <div class="price">
+            ₹180
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chicken 65',180)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chicken 65',180)">
+            Order Now
+        </button>
+
+    </div>
+
+
+
+     
+
+
+</div>
+
+
+<!-- =====================================================
+                       DESSERTS
+===================================================== -->
+
+<h2 class="section-title">
+    Desserts
+</h2>
+
+
+<div class="food-container">
+
+
+    <!-- ICE CREAM -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\icecream.jpeg">
+
+        <h3>Ice Cream</h3>
+
+        <p>Cold and creamy delicious ice cream.</p>
+
+        <div class="price">
+            ₹100
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Ice Cream',100)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Ice Cream',100)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- GULAB JAMUN -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\gulab.jpg">
+
+        <h3>Gulab Jamun</h3>
+
+        <p>Soft sweet gulab jamun in sugar syrup.</p>
+
+        <div class="price">
+            ₹90
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Gulab Jamun',90)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Gulab Jamun',90)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- CHOCOLATE CAKE -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\c cake.jpeg">
+
+        <h3>Chocolate Cake</h3>
+
+        <p>Rich and delicious chocolate cake.</p>
+
+        <div class="price">
+            ₹140
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Chocolate Cake',140)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Chocolate Cake',140)">
+            Order Now
+        </button>
+
+    </div>
+
+
+    <!-- BROWNIE -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\brownie.jpg">
+
+        <h3>Brownie</h3>
+
+        <p>Soft chocolate brownie with rich flavor.</p>
+
+        <div class="price">
+            ₹120
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Brownie',120)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Brownie',120)">
+            Order Now
+        </button>
+
+    </div> 
+  
+   
+     
+    <!-- DONUT -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\ddd.jpeg">
+
+        <h3>Donut</h3>
+
+        <p>soft,sweet and freshly glazed with a delicious topping</p>
+
+        <div class="price">
+            ₹80
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('Ice Cream',80)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('Ice Cream',80)">
+            Order Now
+        </button>
+
+    </div>
+
+      <!-- STRAWBERRY MOUSSE -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\sss.jpeg">
+
+        <h3>Strawberry-Moussie</h3>
+
+        <p>Fresh, creamy strawberry mousse with a sweet fruity flavor.</p>
+
+        <div class="price">
+            ₹90
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('strawberry-mousse',90)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('strawberry-mousse',80)">
+            Order Now
+        </button>
+
+</div>
+
+
+    <!-- RASMALAI -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\rrr.jpeg">
+
+        <h3>Rasmalai</h3>
+
+        <p>Soft, creamy rasmalai soaked in sweet saffron milk and topped with pistachios and almonds.</p>
+
+        <div class="price">
+            ₹80
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('rasmalai',90)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('rasmalai',80)">
+            Order Now
+        </button>
+
+</div>
+
+
+
+
+
+
+
+   <!--CARAMAL-CUSTARD -->
+
+    <div class="food-card">
+
+        <img src="C:\Users\Kamadhenu BCA\Downloads\sam\websitefolder\CCCC.jpeg">
+
+        <h3>Caramal-Custard</h3>
+
+        <p>Creamy caramel custard with a smooth, rich caramel topping. 🍮.</p>
+
+        <div class="price">
+            ₹90
+        </div>
+
+        <button class="cart-btn"
+            onclick="addToCart('caramal-custard',90)">
+            Add to Cart
+        </button>
+
+        <button class="order-btn"
+            onclick="orderNow('caramal-custard',80)">
+            Order Now
+        </button>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Foodie World | Delicious Food • Happy Life
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+let cart =
+    JSON.parse(localStorage.getItem("cart")) || [];
+
+
+function addToCart(name, price) {
+
+    let existing = cart.find(function(item) {
+
+        return item.name === name;
+
+    });
+
+
+    if (existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        cart.push({
+
+            name: name,
+            price: price,
+            quantity: 1
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    alert(name + " added to cart!");
+
+}
+
+
+function orderNow(name, price) {
+
+    addToCart(name, price);
+
+    window.location.href = "Cart.html";
+
+}
+
+</script>
+
+
+</body>
+</html>
